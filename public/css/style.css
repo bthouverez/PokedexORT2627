@@ -17,3 +17,5 @@ nav {
 #show img {
     float: right; width: 200px;
 }
+
+strong { color: red }

@@ -38,3 +38,34 @@ Route::get('/pokemons/{pokemon}', function (Pokemon $pokemon) {
 Route::get('/test', function() {
     return view('layout-hyperspace');
 });
+
+
+Route::post('/pokemons', function() {
+    // valide les données
+    request()->validate([
+        'name' => ['required', 'max:12', 'min:3'],
+        'height' => ['required', 'decimal:2'],
+        'weight' => ['required', 'decimal:2'],
+        'image' => [],
+        'is_shiny' => [],
+        'captured_at' => ['required', 'date'],
+        'level' => ['required', 'integer', 'min:1', 'max:100'],
+        'life' => ['required', 'integer'],
+        'genre' => ['required', 'boolean'],
+    ]);
+
+
+    // persister les données
+    $pok = new Pokemon;
+    $pok->name = request('name');
+    $pok->height = request('height');
+    $pok->weight = request('weight');
+    $pok->image = request('image');
+    $pok->life = request('life');
+    $pok->genre = request('genre');
+    $pok->captured_at = request('captured_at');
+    $pok->level = request('level');
+    $pok->is_shiny = request('is_shiny') == "on" ? 1 : 0;
+    $pok->save();
+    return redirect('/pokemons/'.$pok->id);
+});
