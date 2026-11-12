@@ -23,10 +23,13 @@ Route::get('/pokemons', function() {
 
 
 
+
+Route::get('/pokemons/create', function() {
+    return view('create');
+});
+
 Route::get('/pokemons/{pokemon}', function (Pokemon $pokemon) {
     return view('show', compact('pokemon'));
 });
-
-
 
 

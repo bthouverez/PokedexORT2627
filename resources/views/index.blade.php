@@ -16,7 +16,10 @@
 	</style>
 </head>
 <body>
-
+    <nav style="background: lightgrey; padding: 10px">
+        <a href="/pokemons">Home</a>
+        <a href="/pokemons/create">Create</a>
+    </nav>
 	<table>
 		<tr>
 			<th>ID</th>
@@ -34,7 +37,11 @@
 
 			<tr>
 				<td>{{ $pokemon->id }}</td>
-				<td>{{ $pokemon->name }}</td>
+				<td>
+					<a href="/pokemons/{{ $pokemon->id }}">
+						{{ $pokemon->name }}
+					</a>
+				</td>
 				<td>{{ $pokemon->height }}</td>
 				<td>{{ $pokemon->weight }}</td>
 				<td>{{ $pokemon->life }}</td>
