@@ -33,3 +33,8 @@ Route::get('/pokemons/{pokemon}', function (Pokemon $pokemon) {
 });
 
 
+
+
+Route::get('/test', function() {
+    return view('layout-hyperspace');
+});

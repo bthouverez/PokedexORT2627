@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Un pokemon</title>
-</head>
-<body>
-    <nav style="background: lightgrey; padding: 10px">
-        <a href="/pokemons">Home</a>
-        <a href="/pokemons/create">Create</a>
-    </nav>
+@extends('layout-hyperspace')
+
+
+@section('title', $pokemon->name)
+
+@section('content')
 
     <h1>{{ $pokemon->name }}</h1>
-    <ul>
-        <img width="200" style="float: right" src="{{ $pokemon->image }}">
+    <ul id="show">
+        <img src="{{ $pokemon->image }}">
         <li>id : {{ $pokemon->id }}</li>
         <li>height : {{ $pokemon->height }}</li>
         <li>weight : {{ $pokemon->weight }}</li>
@@ -26,5 +20,4 @@
 
     <a href="/pokemons/{{ $pokemon->id-1}}">Previous</a>
     <a href="/pokemons/{{ $pokemon->id+1}}">Next</a>
-</body>
-</html>
+@endsection

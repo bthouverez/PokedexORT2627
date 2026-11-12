@@ -1,0 +1,19 @@
+body {
+    background: orange;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align:center;
+}
+tr, td, th {
+    border: 1px solid black;
+}
+
+nav {
+    background: lightgrey; padding: 10px;
+}
+
+#show img {
+    float: right; width: 200px;
+}

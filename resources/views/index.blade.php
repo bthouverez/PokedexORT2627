@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Pokemons</title>
-	<style>	
-		table {
-			width: 100%;
-			border-collapse: collapse;
-			text-align:center;
-		}
-		tr, td, th {
-			border: 1px solid black;
-		}
-	</style>
-</head>
-<body>
-    <nav style="background: lightgrey; padding: 10px">
-        <a href="/pokemons">Home</a>
-        <a href="/pokemons/create">Create</a>
-    </nav>
+@extends('layout-hyperspace')
+
+@section('title', 'All pokemons')
+
+@section('content')
 	<table>
 		<tr>
 			<th>ID</th>
@@ -55,5 +38,4 @@
 
 		@endforeach
 	</table>
-</body>
-</html>
+@endsection	
