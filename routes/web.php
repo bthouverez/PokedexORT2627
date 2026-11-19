@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Pokemon;
+use App\Models\Trainer;
+use App\Models\Pokedex;
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,8 +22,6 @@ Route::get('/pokemons', function() {
 
     return view('pokemons.index', compact('pokemons'));
 });
-
-
 
 
 Route::get('/pokemons/create', function() {
@@ -68,4 +68,21 @@ Route::post('/pokemons', function() {
     $pok->is_shiny = request('is_shiny') == "on" ? 1 : 0;
     $pok->save();
     return redirect('/pokemons/'.$pok->id);
+});
+
+
+
+
+
+Route::get('/trainers/create', function() {
+    return view('trainers.create');
+});
+
+Route::get('/trainers/{trainer}', function(Trainer $trainer) {
+    return view('trainers.show', compact('trainer'));
+});
+
+Route::get('/trainers', function() {
+    $trainers = Trainer::all();
+    return view('trainers.index', compact('trainers'));
 });

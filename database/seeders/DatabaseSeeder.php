@@ -191,10 +191,88 @@ class DatabaseSeeder extends Seeder
         $p=new Pokedex; $p->id = 151; $p->name = 'Mew'; $p->save();
 
         $t = new Trainer;
-        $t->name = "Zab";
+        $t->name = "Pierre";
+        $t->genre = 0;
+        $t->level = 11;
+        $t->save();
+
+        $t = new Trainer;
+        $t->name = "Ondine";
+        $t->genre = 1;
+        $t->level = 20;
+        $t->save();
+
+        $t = new Trainer;
+        $t->name = "Major Bob";
+        $t->genre = 0;
+        $t->level = 40;
+        $t->save();
+
+        $t = new Trainer;
+        $t->name = "Erika";
+        $t->genre = 1;
+        $t->level = 50;
+        $t->save();
+
+        $t = new Trainer;
+        $t->name = "Koga";
+        $t->genre = 0;
+        $t->level = 60;
+        $t->save();
+
+        $t = new Trainer;
+        $t->name = "Auguste";
+        $t->genre = 0;
+        $t->level = 60;
+        $t->save();
+
+
+        $t = new Trainer;
+        $t->name = "Agatha";
+        $t->genre = 1;
+        $t->level = 987;
+        $t->save();
+
+
+        $t = new Trainer;
+        $t->name = "Olga";
+        $t->genre = 1;
+        $t->level = 60;
+        $t->save();
+
+
+        $t = new Trainer;
+        $t->name = "Aldo";
+        $t->genre = 0;
+        $t->level = 60;
+        $t->save();
+
+        $t = new Trainer;
+        $t->name = "Giovanni";
+        $t->genre = 0;
+        $t->level = 70;
+        $t->save();
+
+        $t = new Trainer;
+        $t->name = "Peter";
         $t->genre = 0;
         $t->level = 987;
         $t->save();
+
+
+        $t = new Trainer;
+        $t->name = "Mehdi";
+        $t->genre = 0;
+        $t->level = 9879;
+        $t->save();
+
+
+        $t = new Trainer;
+        $t->name = "Morgane";
+        $t->genre = 1;
+        $t->level = 45;
+        $t->save();
+
 
     }
 }

@@ -6,13 +6,13 @@
 	<table>
 		<tr>
 			<th>ID</th>
-			<th>Nom</th>
-			<th>Taille</th>
-			<th>Poids</th>
-			<th>Vie</th>
+			<th>Name</th>
+			<th>Height</th>
+			<th>Weight</th>
+			<th>Life</th>
 			<th>Genre</th>
-			<th>Date capture</th>
-			<th>Niveau</th>
+			<th>Capture date</th>
+			<th>Level</th>
 			<th>Shiny</th>
 			<th>Image</th>
 		</tr>
@@ -28,10 +28,10 @@
 				<td>{{ $pokemon->height }}</td>
 				<td>{{ $pokemon->weight }}</td>
 				<td>{{ $pokemon->life }}</td>
-				<td>{{ $pokemon->genre ? 'Femelle' : 'Male' }}</td>
+				<td>{{ $pokemon->genre ? 'Female' : 'Male' }}</td>
 				<td>{{ $pokemon->captured_at }}</td>
 				<td>{{ $pokemon->level }}</td>
-				<td>{{ $pokemon->is_shiny ? 'Oui' : 'Non' }}</td>
+				<td>{{ $pokemon->is_shiny ? 'Yes' : 'No' }}</td>
 				<td><img width="150" src="{{ $pokemon->image }}" alt="Image {{ $pokemon->name}}"></td>
 
 			</tr>

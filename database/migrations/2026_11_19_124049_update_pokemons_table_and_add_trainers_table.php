@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('name');
             $table->boolean('genre');
             $table->integer('level');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
