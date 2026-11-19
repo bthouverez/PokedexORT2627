@@ -18,6 +18,7 @@ return new class extends Migration
         Schema::create('pokedex', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->timestamps();
         });
 
         Schema::create('trainers', function (Blueprint $table) {
