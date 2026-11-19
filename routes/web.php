@@ -18,25 +18,25 @@ Route::get('/pokemons', function() {
 
     $pokemons = Pokemon::all();
 
-    return view('index', compact('pokemons'));
+    return view('pokemons.index', compact('pokemons'));
 });
 
 
 
 
 Route::get('/pokemons/create', function() {
-    return view('create');
+    return view('pokemons.create');
 });
 
 Route::get('/pokemons/{pokemon}', function (Pokemon $pokemon) {
-    return view('show', compact('pokemon'));
+    return view('pokemons.show', compact('pokemon'));
 });
 
 
 
 
 Route::get('/test', function() {
-    return view('layout-hyperspace');
+    return view('layouts.layout-hyperspace');
 });
 
 

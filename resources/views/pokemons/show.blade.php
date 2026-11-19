@@ -1,4 +1,4 @@
-@extends('layout-hyperspace')
+@extends('layouts.layout-hyperspace')
 
 
 @section('title', $pokemon->name)
